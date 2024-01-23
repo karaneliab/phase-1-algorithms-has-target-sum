@@ -1,13 +1,18 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-  for(let i = 0 ; i < array.lenght; i++){
+  for(let i = 0; i < array.length; i++){
     const reduction = target - array[i]; 
-    for(let l = i + 1; l < array.lenght; l++){
-       if(array[l] == reduction)return false;
+    for(let l = i + 1; l < array.length; l++){
+       if(array[l] === reduction){
+        return true;
+       }
     }
+     
   }
-  return true;
+ return false;
 }
+
+
 
 /* 
   Write the Big O time complexity of your function here
